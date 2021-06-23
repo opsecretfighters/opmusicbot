@@ -101,7 +101,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Playing** le ab sun {} via YouTube Music 😜".format(
+        caption="▶️ **Playing** le ab sun {} via 🔥 DANISH OP 🔥".format(
         message.from_user.mention()
         ),
     )
