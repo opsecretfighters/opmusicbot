@@ -64,6 +64,7 @@ async def play(_, message: Message):
                         text="Watch On YouTube 🎬",
                         url=f"{url}")
                    
+
                 ]
             ]
         )
@@ -74,7 +75,11 @@ async def play(_, message: Message):
                     InlineKeyboardButton(
                         text="Watch On YouTube 🎬",
                         url=f"{url}")
-                   
+                   InlineKeyboardButton("⏹", "leave"),
+                   InlineKeyboardButton("⏸", "pause"),
+                   InlineKeyboardButton("▶️", "resume"),
+                   InlineKeyboardButton("⏭", "skip")
+
                 ]
             ]
         )
@@ -101,7 +106,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Playing** le ab sun {} via 🔥 DANISH OP 🔥".format(
+        caption="▶️ **Playing** le ab sun {} via [🔥 DANISH OP 🔥](https://t.me/IDANISHBABA)".format(
         message.from_user.mention()
         ),
     )
