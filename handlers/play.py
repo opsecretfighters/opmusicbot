@@ -23,8 +23,20 @@ async def play(_, message: Message):
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
-    keyboard = InlineKeyboardMarkup(
+    def r_ply(type_):
+    if type_ == 'play':
+        ico = '▶'
+    else:
+        ico = '⏸'
+    mar = InlineKeyboardMarkup(
+        [
             [
+                InlineKeyboardButton('⏹', 'leave'),
+                InlineKeyboardButton('⏸', 'puse'),
+                InlineKeyboardButton('▶️', 'resume'),
+                InlineKeyboardButton('⏭', 'skip')
+                
+            ],
                 [
                     InlineKeyboardButton(
                         text="🔥 DANISH OP 🔥",
