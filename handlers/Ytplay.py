@@ -57,20 +57,8 @@ async def play(_, message: Message):
         print(str(e))
         return
 
-    def r_ply(type_):
-    if type_ == 'play':
-        ico = '▶'
-    else:
-        ico = '⏸'
-    mar = InlineKeyboardMarkup(
-        [
+    keyboard = InlineKeyboardMarkup(
             [
-                InlineKeyboardButton('⏹', 'leave'),
-                InlineKeyboardButton('⏸', 'puse'),
-                InlineKeyboardButton('▶️', 'resume'),
-                InlineKeyboardButton('⏭', 'skip')
-                
-            ],
                 [
                     InlineKeyboardButton(
                         text="Watch On YouTube 🎬",
