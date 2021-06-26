@@ -28,12 +28,8 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="🔥 DANISH OP 🔥",
-                        url="https://t.me/idanishbaba")
-                   InlineKeyboardButton('⏹', 'leave'),
-                   InlineKeyboardButton('⏸', 'pause'),
-                   InlineKeyboardButton('▶️', 'resume'),
-                   InlineKeyboardButton('⏭', 'skip')
-
+                        url="https://t.me/IDANISHBABA")
+                   
                 ]
             ]
         )
