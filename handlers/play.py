@@ -19,24 +19,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Processing** sabar kar thodasa...")
+    lel = await message.reply("🔄 Processing sabar kar thodasa...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
-    def r_ply(type_):
-    if type_ == 'play':
-        ico = '▶'
-    else:
-        ico = '⏸'
-    mar = InlineKeyboardMarkup(
-        [
+    keyboard = InlineKeyboardMarkup(
             [
-                InlineKeyboardButton('⏹', 'leave'),
-                InlineKeyboardButton('⏸', 'puse'),
-                InlineKeyboardButton('▶️', 'resume'),
-                InlineKeyboardButton('⏭', 'skip')
-                
-            ],
                 [
                     InlineKeyboardButton(
                         text="🔥 DANISH OP 🔥",
@@ -67,13 +55,13 @@ async def play(_, message: Message):
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"#⃣ **Queued** at position {position}!")
+        await lel.edit(f"#⃣ Queued at position {position}!")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="https://telegra.ph/file/3f820c626ba0b81065c00.jpg",
         reply_markup=keyboard,
-        caption="▶️ **Playing** le tera song sun ab..🔥{}!".format(
+        caption="▶️ Playing le tera song sun ab..🔥{}!".format(
         message.from_user.mention()
         ),
     )
