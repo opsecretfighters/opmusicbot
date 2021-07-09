@@ -16,7 +16,7 @@ async def start_(client: Client, message: Message):
 I am powerful VC music Bot..🔥
 I can play songs in your group's VC 😉
 
-To listen songs also add @danishbabamusic to your group..
+To listen songs also add @DANISHMUSICBOT to your group..
 
 And don't forgot to promote me with all rights..😉
 Otherwise I can't play songs..🙄
